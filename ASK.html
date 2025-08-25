@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sürpriz AŞK Odası</title>
+  <style>
+    body {
+      margin: 0;
+      background: url("oda.jpg") no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+    }
+    .hotspot {
+      position: absolute;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: transform 0.2s;
+      background: transparent; /* Hotspotları görebilmek için */
+    }
+    .hotspot:hover {
+      transform: scale(1.2);
+    }
+    .message {
+      display: none;
+      position: fixed;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+    .message button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      border: none;
+      background: #ff4081;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tıklanabilir alanlar mapping'e göre -->
+  <div class="hotspot" style="top:43.66%; left:55.45%; width:8.32%; height:9.05%;" onclick="showMessage('goz')"></div>
+  <div class="hotspot" style="top:52.38%; left:13.67%; width:14.05%; height:13.93%;" onclick="showMessage('dogum')"></div>
+  <div class="hotspot" style="top:39.21%; left:50.49%; width:3.27%; height:11.79%;" onclick="showMessage('muzik')"></div>
+  <div class="hotspot" style="top:39.41%; left:76.01%; width:13.27%; height:53.93%;" onclick="showMessage('agac')"></div>
+  <div class="hotspot" style="top:69.72%; left:43.48%; width:18.98%; height:9.47%;" onclick="showMessage('corap')"></div>
+  <div class="hotspot" style="top:56.03%; left:50.44%; width:4.73%; height:5.32%;" onclick="showMessage('icki')"></div>
+  <div class="hotspot" style="top:24.34%; left:64.88%; width:7.31%; height:19.01%;" onclick="showMessage('geceler')"></div>
+
+  <!-- Mesaj kutuları -->
+  <div class="message" id="goz">
+    <h2>Göz</h2>
+    <p>Gözlerim hep o güzel gözlerine baksın</p>
+    <button onclick="hideMessage('goz')">Kapat</button>
+  </div>
+
+  <div class="message" id="dogum">
+    <h2>Doğum Günü</h2>
+    <p>Doğum günü sürprizi! iyi ki doğdun birtanem</p>
+    <button onclick="hideMessage('dogum')">Kapat</button>
+  </div>
+
+  <div class="message" id="muzik">
+    <h2>Müzik</h2>
+    <p><a href="https://www.youtube.com/watch?v=lltK2QXRluY" target="_blank">Buraya tıkla</a></p>
+    <button onclick="hideMessage('muzik')">Kapat</button>
+  </div>
+
+  <div class="message" id="agac">
+    <h2>Ağaç</h2>
+    <p>Yeni yaşında da her yılbaşında ağaçlarımızı beraber süsleyelim</p>
+    <button onclick="hideMessage('agac')">Kapat</button>
+  </div>
+
+  <div class="message" id="corap">
+    <h2>Çorap</h2>
+    <p>Her yeni yaşında yeni çorapların benden aşkım</p>
+    <button onclick="hideMessage('corap')">Kapat</button>
+  </div>
+
+  <div class="message" id="icki">
+    <h2>İçki</h2>
+    <p>Kokteyllerini ben yaparım, sen rahat ol</p>
+    <button onclick="hideMessage('icki')">Kapat</button>
+  </div>
+
+  <div class="message" id="geceler">
+    <h2>Geceler</h2>
+    <p>Geceleri hatırladın mı? Hep seninle geçsin gecelerim</p>
+    <button onclick="hideMessage('geceler')">Kapat</button>
+  </div>
+
+  <script>
+    function showMessage(id) {
+      document.getElementById(id).style.display = "block";
+    }
+    function hideMessage(id) {
+      document.getElementById(id).style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
